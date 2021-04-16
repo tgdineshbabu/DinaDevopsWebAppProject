@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,10 +16,13 @@ public class DinaWebAppTest {
     @BeforeTest
     public void init() {
         System.out.println("Initializing Chrome driver");
-        System.setProperty("webdriver.chrome.driver", "/Users/dgnaneswaran/Downloads/chromedriver");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        driver = new ChromeDriver(chromeOptions);
         System.out.println("Starting the test...");
-        driver.get("http://10.198.35.223:1256/addressbook/");
+        driver.get("http://localhost:1256/addressbook/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
