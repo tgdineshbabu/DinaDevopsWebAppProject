@@ -2,4 +2,13 @@
 target/
 
 # Test Output Files #
-test-output/
+test-output
+
+.settings/
+
+
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
