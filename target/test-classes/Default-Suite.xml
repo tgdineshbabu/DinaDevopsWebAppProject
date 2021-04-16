@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite verbose="4" name="Default-Suite" junit="false"
-	annotations="JDK" data-provider-thread-pool-size="20">
-	<test name="DefaultTest">
-		<classes>
-		</classes>
-	</test>
-</suite>
