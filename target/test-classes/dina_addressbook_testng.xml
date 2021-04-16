@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite thread-count="50" verbose="4" name="AddressBook_WebApp_Test"
+	junit="false" annotations="JDK" data-provider-thread-count="50"
+	data-provider-thread-pool-size="50">
+	<test name="AddressBookTest" preserve-order="true">
+		<classes>
+			<class name="com.dina.devops.DinaWebAppTest" />
+		</classes>
+	</test>
+</suite>
